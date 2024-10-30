@@ -3,9 +3,19 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f; // Velocidad de movimiento
-    public float jumpForce = 5f; // Fuerza del salto
+    public float jumpForce = 2f; // Fuerza del salto
+    public float movHor;
+
     private bool isGrounded; // Para verificar si el jugador está en el suelo
+    private bool isMooving = false;
+    private bool isInmune = false;
+
+    public float InmuneTimeCnt = 0f;
+    public float InmuneTime = 0.5f;
+
     private Rigidbody2D rb;
+    private Animator anim;
+    private SpriteRenderer spr;
 
     void Start()
     {
