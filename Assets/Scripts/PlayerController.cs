@@ -138,4 +138,5 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("PlayerProgress.Instance es nulo. No se puede reaparecer.");
         }
     }
+
 }
